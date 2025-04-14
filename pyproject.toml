@@ -1,6 +1,2 @@
-[project]
-name = "fasttext-wheel"
-version = "0.9.3"
-
 [build-system]
 requires = ["setuptools", "wheel", "pybind11"]
