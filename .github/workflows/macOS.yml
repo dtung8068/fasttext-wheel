@@ -59,6 +59,7 @@ jobs:
         with:
           name: macos-wheels
           path: dist/fasttext_wheel-*.whl
+          overwrite: true
       - name: Publish macOS package
         if: github.event_name == 'workflow_dispatch' || startsWith(github.event.ref, 'refs/tags')
         shell: bash -l {0}
