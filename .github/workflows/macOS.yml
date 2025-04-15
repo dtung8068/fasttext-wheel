@@ -39,7 +39,7 @@ jobs:
             # set minimum sdk version to our target
             plutil -replace MinimumSDKVersion -string ${MACOSX_DEPLOYMENT_TARGET} $(xcode-select -p)/Platforms/MacOSX.platform/Info.plist
             plutil -replace DTSDKName -string macosx${MACOSX_DEPLOYMENT_TARGET}internal $(xcode-select -p)/Platforms/MacOSX.platform/Info.plist
-            conda create -qy -n fasttext_venv python=${{ matrix.python-version }} wheel
+            conda create -qy -n fasttext_venv python=${{ matrix.python-version }} wheel setuptools
             conda init bash
             source ~/.bash_profile
             conda activate fasttext_venv
